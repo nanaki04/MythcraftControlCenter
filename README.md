@@ -1,6 +1,6 @@
 # MythcraftControlCenter
 
-**TODO: Add description**
+Module for the Mythcraft game intended to receive and handle messages from the user interface.
 
 ## Installation
 
