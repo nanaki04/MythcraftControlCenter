@@ -31,8 +31,9 @@ defmodule GameInitializer do
   end
 
   defp generate_game_id() do
-    # TODO
-    DateTime.to_unix DateTime.utc_now
+    {x, y, z} = :os.timestamp
+    id = "game_id: " <> to_string(x) <> to_string(y) <> to_string(z) <> to_string(:rand.uniform)
+    {:global, id}
   end
 
 end
