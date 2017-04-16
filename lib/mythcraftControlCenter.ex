@@ -16,7 +16,7 @@ defmodule MythcraftControlCenter do
     {:reply, game_id, config}
   end
 
-  def handle_call({:get_maplist}, config) do
+  def handle_call({:get_maplist}, _from, config) do
     maplist = config[:masterdata].get_maplist
     {:reply, maplist, config}
   end
