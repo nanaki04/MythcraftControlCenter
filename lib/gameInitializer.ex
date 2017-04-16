@@ -17,7 +17,7 @@ defmodule GameInitializer do
 
   defp initialize_gamestate(mapdata, map, config) do
     {:ok, gamestate} = config[:gamestate].start_link map
-    config[:gamestate].import_gamestate gamestate, mapdata, config
+    config[:gamestate].import_gamestate gamestate, mapdata
     gamestate
   end
 
