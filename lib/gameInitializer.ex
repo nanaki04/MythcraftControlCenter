@@ -27,7 +27,7 @@ defmodule GameInitializer do
   end
 
   defp save_gamestate(gamestate, config) do
-    config[:gamestate].export_gamestate gamestate, config
+    config[:gamestate].save_gamestate gamestate, config
   end
 
   defp generate_game_id() do
