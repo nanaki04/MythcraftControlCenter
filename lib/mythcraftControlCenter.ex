@@ -2,11 +2,13 @@ defmodule MythcraftControlCenter do
   use GenServer
 
   def start_link(config) do
+    IO.puts("STARTING CONTROL CENTER LINK");
     # TODO use multiple control centers if it appears to be a bottleneck
     GenServer.start_link(__MODULE__, config, name: __MODULE__)
   end
 
   def init(config) do
+    IO.puts("INIT CONTROL CENTER");
     {:ok, config}
   end
 
